@@ -1,0 +1,19 @@
+Funcionalidade: Realizar o setup do teste para Android
+
+  Cenário: Setup do Android
+    Dado que quero testar um app android ... passed in 0.000s
+    E a versão da plataforma é 7.1.1 ... passed in 0.000s
+    E o nome do device é emulator-5554 ... passed in 0.000s
+    E o app a ser testado é Zamium.Droid.apk ... passed in 0.000s
+    E o servidor está em http://localhost:4723/wd/hub ... passed in 0.000s
+    Quando tento inicializar o teste ... passed in 41.514s
+    Então recebo um status ok ... passed in 0.000s
+
+Funcionalidade: Realizar o login com sucesso
+
+  Cenário: Efetuando o login válido
+    Dado que quero efetuar o login ... passed in 0.000s
+    E estou na tela Zap Conecta ... passed in 0.000s
+    Quando clico no xpath android.widget.RelativeLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.Button ... failed in 448.842s
+ABORTED: By user (KeyboardInterrupt).
+
