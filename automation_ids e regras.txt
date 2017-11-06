@@ -1,0 +1,30 @@
+Tela de Login
+
+Field_Username
+Field_Password
+Button_Login
+
+
+Tela Principal (lista)
+
+List_Users
+ListItem_User
+Button_Add
+
+
+Tela de Usuário
+
+Image_Photo
+Field_Name
+Button_Save
+
+
+Regras
+
+Login
+Username: não vazio, começa com letras a, b, c, d ou e, pelo menos 3 caracteres
+Password: não vazio, pelo menos 4 caracteres
+
+Salvar Usuário
+Username: mesmas do login
+Email: não vazio, termina com "@email.com.br"

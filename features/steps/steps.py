@@ -1,20 +1,41 @@
 # encoding: utf-8
 
-from selenium import webdriver
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.keys import Keys
+# from selenium import webdriver
+# from selenium.webdriver.support.ui import Select
+# from selenium.webdriver.common.keys import Keys
 import time
 
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+import os
+from os.path import abspath, dirname
+from sys import path
+
 # from pwa_driver import PwaDriver
-from android_driver import AndroidDriver
+# from android_driver import AndroidDriver
+# from appium import webdriver
+
+from appium import webdriver
+
+PATH = lambda p: os.path.abspath(
+    os.path.join(os.path.dirname(__file__), p)
+)
+
+desired_caps = {}
+desired_caps['platformName'] = 'Android'
+# desired_caps['platformVersion'] = '5.0.1'
+desired_caps['deviceName'] = 'Nexus_4_API_23'
+# desired_caps['app'] = PATH('Zamium.Droid.apk')
+desired_caps['app'] = '/home/wendell/code/tampi-testes/apps/Zamium.Droid.apk'
+# desired_caps['app'] = '/home/wendell/code/pocs-backend/appium-python-android/XamPCL.Android-Signed.apk'
+driver = webdriver.Remote('http://192.168.15.3:4723/wd/hub', desired_caps)
 
 @given(u'que quero testar um app android')
 def step_impl(context):
-    context.config.driver = AndroidDriver()
+    # context.config.driver = AndroidDriver()
+    context.config.driver = driver
     context.config.driver.platform_name = 'Android'
 
 @given(u'a versão da plataforma é {platform_version}')
@@ -54,7 +75,9 @@ def step_impl(context, screen):
 def step_impl(context, campo):
     # import pdb ; pdb.set_trace()
     # context.config.driver.find_element_by_xpath('@AutomationId=Field_Username')
-    context.config.driver.find_element_by_xpath(campo).click()
+    # context.config.driver.find_element_by_xpath(campo).click()
+    import pdb ; pdb.set_trace()
+    context.config.driver.find_element_by_accessibility_id(campo).click()
 
 @then('sou direcionado para a tela de {screen}')
 def step(context, screen):
