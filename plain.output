@@ -1,14 +1,19 @@
 Funcionalidade: Realizar o setup do teste para Android
 
   Cenário: Setup do Android
-    Dado que quero testar um app android ... failed in 0.000s
-Traceback (most recent call last):
-  File "/home/wendell/code/app/local/lib/python2.7/site-packages/behave/model.py", line 1456, in run
-    match.run(runner.context)
-  File "/home/wendell/code/app/local/lib/python2.7/site-packages/behave/model.py", line 1903, in run
-    self.func(context, *args, **kwargs)
-  File "features/steps/steps.py", line 19, in step_impl
-    context.config.driver = webdriver.WebDriver()
-AttributeError: 'module' object has no attribute 'WebDriver'
+    Dado que quero testar um app android ... passed in 0.001s
+    E a versão da plataforma é 7.1.1 ... passed in 0.000s
+    E o nome do device é emulator-5554 ... passed in 0.000s
+    E o app a ser testado é Zamium.Droid.apk ... passed in 0.000s
+    E o servidor está em http://localhost:4723/wd/hub ... passed in 0.000s
+    Quando tento inicializar o teste ... passed in 0.001s
+    Então recebo um status ok ... passed in 0.000s
 
+Funcionalidade: Realizar o login com sucesso
+
+  Cenário: Efetuando o login válido
+    Dado que quero efetuar o login ... passed in 0.000s
+    E estou na tela Zap Conecta ... passed in 0.000s
+    Quando clico no xpath @content-desc="Field_Username" ... failed in 350.751s
+ABORTED: By user (KeyboardInterrupt).
 
