@@ -1,2 +1,3 @@
 features/xamarin/android/setup.feature
 features/xamarin/android/login.feature
+features/xamarin/android/contato.feature

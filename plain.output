@@ -1,19 +1,30 @@
 Funcionalidade: Realizar o setup do teste para Android
 
   Cenário: Setup do Android
-    Dado que quero testar um app android ... passed in 0.001s
+    Dado que quero testar um app android ... passed in 0.000s
     E a versão da plataforma é 7.1.1 ... passed in 0.000s
     E o nome do device é emulator-5554 ... passed in 0.000s
-    E o app a ser testado é Zamium.Droid.apk ... passed in 0.000s
-    E o servidor está em http://localhost:4723/wd/hub ... passed in 0.000s
+    E o app a ser testado é Zamium.Droid.apk ... passed in 0.001s
+    E o servidor está em http://localhost:4723/wd/hub ... passed in 0.001s
     Quando tento inicializar o teste ... passed in 0.001s
     Então recebo um status ok ... passed in 0.000s
 
-Funcionalidade: Realizar o login com sucesso
+Funcionalidade: Realizar o login
 
   Cenário: Efetuando o login válido
     Dado que quero efetuar o login ... passed in 0.000s
-    E estou na tela Zap Conecta ... passed in 0.000s
-    Quando clico no xpath @content-desc="Field_Username" ... failed in 350.751s
-ABORTED: By user (KeyboardInterrupt).
+    E preencho o campo Field_Username com o valor abc ... passed in 5.606s
+    E preencho o campo Field_Password com o valor 1234 ... passed in 6.058s
+    Quando eu clico no botao Button_Login ... passed in 1.913s
+    Então sou direcionado para a tela de Listagem de Contatos ... passed in 0.000s
+
+Funcionalidade: Realizar o cadastro de um contato
+
+  Cenário: Cadastro de um contato
+    Dado que quero cadastrar um contato ... passed in 0.001s
+    E eu clico no botao Button_Add ... passed in 1.874s
+    E preencho o campo Field_Name com o valor abc ... passed in 6.098s
+    E preencho o campo Field_Email com o valor abc@email.com.br ... passed in 6.165s
+    Quando eu clico no botao Button_Save ... passed in 1.189s
+    Então sou direcionado para a tela de Listagem de Contatos ... passed in 0.001s
 

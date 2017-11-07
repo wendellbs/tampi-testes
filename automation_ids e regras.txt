@@ -16,6 +16,7 @@ Tela de Usuário
 
 Image_Photo
 Field_Name
+Field_Email
 Button_Save
 
 
