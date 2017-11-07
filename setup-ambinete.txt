@@ -1,4 +1,2 @@
 # Instalar docker na máquina:
 https://download.docker.com/linux/ubuntu/dists/zesty/pool/stable/amd64/
-
-#
