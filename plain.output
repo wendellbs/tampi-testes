@@ -4,6 +4,75 @@ Funcionalidade: Realizar o setup do teste para Android
     Dado que quero testar um app Android ... passed in 0.000s
     E a versão da plataforma é 6.0 ... passed in 0.000s
     E o nome do device é Nexus_4_API_23 ... passed in 0.000s
-    E o app a ser testado é Zamium.Droid.apk ... passed in 0.001s
+    E o app a ser testado é Zamium.Droid.apk ... passed in 0.000s
     E o servidor está em http://localhost:4723/wd/hub ... passed in 0.001s
-    Quando tento inicializar o teste ... passed in 19.009s
+    Quando tento inicializar o teste ... passed in 14.860s
+    Então recebo um status ok ... passed in 0.001s
+
+Funcionalidade: Realizar o login
+
+  Cenário: Efetuando o login inválido
+    Dado que quero efetuar o login ... passed in 0.000s
+    E estou na tela Page_Login ... passed in 0.210s
+    E preencho o campo Field_Username com o valor Marcelo ... passed in 6.205s
+    E preencho o campo Field_Password com o valor 12345 ... passed in 5.974s
+    Quando eu clico no botao Button_Login ... passed in 1.713s
+    Então aparece uma mensagem de Antenção ... passed in 0.001s
+    E eu clico no botao OK pelo xpath /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v7.widget.LinearLayoutCompat/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button ... passed in 3.633s
+
+  Cenário: Efetuando o login válido
+    Dado que quero efetuar o login ... passed in 0.002s
+    E estou na tela Page_Login ... passed in 0.017s
+    E preencho o campo Field_Username com o valor abc ... passed in 6.100s
+    E preencho o campo Field_Password com o valor 1234 ... passed in 6.744s
+    Quando eu clico no botao Button_Login ... passed in 1.901s
+    Então sou direcionado para a tela Page_Main ... passed in 1.433s
+
+Funcionalidade: Realizar o cadastro de contatos
+
+  Esquema do Cenário: Cadastro de um contato válido -- @1.1 Dados para cadastro de contatos.
+    Dado que quero cadastrar um contato ... passed in 0.001s
+    E estou na tela Page_Main ... passed in 0.017s
+    Quando eu clico no botao Button_Add ... passed in 0.455s
+    Então sou direcionado para a tela Page_User ... passed in 0.669s
+    E preencho o campo Field_Name com o valor Andre ... passed in 6.189s
+    E preencho o campo Field_Email com o valor andre@email.com.br ... passed in 6.405s
+    Quando eu clico no botao Button_Save ... passed in 1.251s
+    Então sou direcionado para a tela Page_Main ... passed in 1.032s
+
+  Esquema do Cenário: Cadastro de um contato válido -- @1.2 Dados para cadastro de contatos.
+    Dado que quero cadastrar um contato ... passed in 0.001s
+    E estou na tela Page_Main ... passed in 0.025s
+    Quando eu clico no botao Button_Add ... passed in 0.239s
+    Então sou direcionado para a tela Page_User ... passed in 0.680s
+    E preencho o campo Field_Name com o valor Daniel ... passed in 6.078s
+    E preencho o campo Field_Email com o valor daniel@email.com.br ... passed in 6.463s
+    Quando eu clico no botao Button_Save ... passed in 1.223s
+    Então sou direcionado para a tela Page_Main ... passed in 0.933s
+
+  Esquema do Cenário: Cadastro de um contato inválido -- @1.1 Dados para cadastro de contatos.
+    Dado que quero cadastrar um contato ... passed in 0.001s
+    E estou na tela Page_Main ... passed in 0.017s
+    Quando eu clico no botao Button_Add ... passed in 0.258s
+    Então sou direcionado para a tela Page_User ... passed in 0.653s
+    E preencho o campo Field_Name com o valor Rafael ... passed in 5.600s
+    E preencho o campo Field_Email com o valor rafael@email.com.br ... passed in 6.387s
+    Quando eu clico no botao Button_Save ... passed in 1.200s
+    Então aparece uma mensagem de Erro ... passed in 0.001s
+    E eu clico no botao OK pelo xpath /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v7.widget.LinearLayoutCompat/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button ... passed in 3.814s
+    E pressiono o botao voltar no celular ... passed in 3.033s
+    E sou direcionado para a tela Page_Main ... passed in 0.017s
+
+  Esquema do Cenário: Cadastro de um contato inválido -- @1.2 Dados para cadastro de contatos.
+    Dado que quero cadastrar um contato ... passed in 0.000s
+    E estou na tela Page_Main ... passed in 0.010s
+    Quando eu clico no botao Button_Add ... passed in 0.235s
+    Então sou direcionado para a tela Page_User ... passed in 0.742s
+    E preencho o campo Field_Name com o valor Amanda ... passed in 5.528s
+    E preencho o campo Field_Email com o valor amanda.email.com.br ... passed in 6.465s
+    Quando eu clico no botao Button_Save ... passed in 1.225s
+    Então aparece uma mensagem de Erro ... passed in 0.002s
+    E eu clico no botao OK pelo xpath /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v7.widget.LinearLayoutCompat/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button ... passed in 3.805s
+    E pressiono o botao voltar no celular ... passed in 3.069s
+    E sou direcionado para a tela Page_Main ... passed in 0.010s
+

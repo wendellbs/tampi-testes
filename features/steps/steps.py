@@ -1,6 +1,4 @@
 # -*- coding: UTF-8 -*-
-import time
-
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -51,7 +49,7 @@ def step_impl(context):
 def step_impl(context):
     pass
 
-@given(u'que quero efetuar o login')
+@given(u'que quero cadastrar um contato')
 def step_impl(context):
     pass
 
@@ -69,20 +67,16 @@ def step_impl(context, botao):
 
     context.config.driver.find_element_by_accessibility_id(botao).click()
 
-@then(u'preencho o campo {campo} com o valor {valor}')
-@given(u'preencho o campo {campo} com o valor {valor}')
-def step_impl(context, campo, valor):
-    context.config.driver.find_element_by_accessibility_id(campo).click()
-    context.config.driver.find_element_by_accessibility_id(campo).send_keys(valor)
-
 @given('sou direcionado para a tela {screen}')
 @then('sou direcionado para a tela {screen}')
 def step(context, screen):
     context.config.driver.find_element_by_accessibility_id(screen)
 
-@given(u'que quero cadastrar um contato')
-def step_impl(context):
-    pass
+@then(u'preencho o campo {campo} com o valor {valor}')
+@given(u'preencho o campo {campo} com o valor {valor}')
+def step_impl(context, campo, valor):
+    context.config.driver.find_element_by_accessibility_id(campo).click()
+    context.config.driver.find_element_by_accessibility_id(campo).send_keys(valor)
 
 @then(u'aparece uma mensagem de {mensagem}')
 def step_impl(context, mensagem):
@@ -99,3 +93,7 @@ def step_impl(context, botao):
     elif botao == "recentes":
         context.config.driver.press_keycode(AndroidKeys.RECENT_APPS)
     sleep(3)
+
+@given(u'que quero efetuar o login')
+def step_impl(context):
+    pass
