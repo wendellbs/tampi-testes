@@ -1,0 +1,9 @@
+Funcionalidade: Realizar o setup do teste para Android
+
+  Cenário: Setup do Android
+    Dado que quero testar um app Android ... passed in 0.000s
+    E a versão da plataforma é 6.0 ... passed in 0.000s
+    E o nome do device é Nexus_4_API_23 ... passed in 0.000s
+    E o app a ser testado é Zamium.Droid.apk ... passed in 0.001s
+    E o servidor está em http://localhost:4723/wd/hub ... passed in 0.001s
+    Quando tento inicializar o teste ... passed in 19.009s

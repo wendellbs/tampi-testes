@@ -9,13 +9,12 @@ import os
 from os.path import abspath, dirname
 from sys import path
 from time import sleep
-from appium import webdriver
 from utils.constants import AndroidKeys
+from appium import webdriver
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
-
 
 @given(u'que quero testar um app {type_app}')
 def step_impl(context, type_app):
